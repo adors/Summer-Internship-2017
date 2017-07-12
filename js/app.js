@@ -66,6 +66,20 @@ var megaliths = [{
     sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
 }, {pos: [170, 310],
     sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [192, 310],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [214, 310],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [236, 310],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [170, 230],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [192, 230],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [214, 230],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
+}, {pos: [236, 230],
+    sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
 }];
 /*megaliths.push(
 {
@@ -196,8 +210,20 @@ function updateEntities(dt) {
     }
 
     // Update all the enemies
-    for(var i=0; i<enemies.length; i++) {
-        enemies[i].pos[0] -= enemySpeed * dt;
+    for(var i=0; i<enemies.length; i++) { 
+        var isTrue;
+        for(var k=0; k<megaliths.length; k++) {
+            var pos2 = megaliths[k].pos;
+            var size2 = megaliths[k].sprite.size;
+            if(boxCollides(enemies[i].pos, enemies[i].sprite.size, pos2, size2)) {
+                isTrue = false;
+                break;
+            }
+            isTrue = true;
+        }
+        if (isTrue) {
+            enemies[i].pos[0] -= enemySpeed * dt;
+        }
         enemies[i].sprite.update(dt);
 
         // Remove if offscreen
@@ -272,7 +298,7 @@ function checkCollisions() {
         var pos = enemies[i].pos;
         var size = enemies[i].sprite.size;
 
-        for(var k=0; k<megaliths.length; k++) {
+       /* for(var k=0; k<megaliths.length; k++) {
             var pos2 = megaliths[k].pos;
             var size2 = megaliths[k].sprite.size;
 
@@ -295,7 +321,7 @@ function checkCollisions() {
                 });
                 break;
             }
-        }
+        }*/
 
         for(var j=0; j<bullets.length; j++) {
             var pos2 = bullets[j].pos;
