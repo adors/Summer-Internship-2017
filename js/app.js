@@ -59,6 +59,8 @@ var player = {
 var bullets = []; //Пули
 var enemies = []; //Враги 
 var explosions = []; //Взрывы
+var manna = [];
+
 var megaliths = [{
     pos: [100, 100],
     sprite: new Sprite('img/sprites.png', [0, 169], [22, 22])
@@ -91,10 +93,13 @@ var megaliths = [{
 
 var lastFire = Date.now(); //Когда был последний выстрел
 var gameTime = 0; //Время игры
+var countTime = 0;
 var isGameOver;
 var terrainPattern; //изображение местности
 
+var countManna = 0;
 var score = 0; //Очки
+var countMannaEl = document.getElementById('manna');
 var scoreEl = document.getElementById('score');
 
 // Скорость в пикселях в секунду
@@ -119,11 +124,25 @@ function update(dt) {
                                6, [0, 1, 2, 3, 2, 1])
         });
     }
+    
+
+    if (gameTime >= countTime) {
+            countTime += 3;
+            if (manna.length == 10) {
+                manna.splice(1, 1);
+            }
+            manna.push({
+            pos: [Math.random() * (canvas.width - 50),
+                  Math.random() * (canvas.height - 50)],
+            sprite: new Sprite('img/sprites.png', [0, 215], [44, 45], 6, [0, 1, 2, 1, 0])
+        });
+    }
 
 
     checkCollisions();
 
     scoreEl.innerHTML = score;
+    countMannaEl.innerHTML = countManna;
 };
 
 function checkMegaliths() {
@@ -243,6 +262,9 @@ function updateEntities(dt) {
             i--;
         }
     }
+    for(var i=0; i<manna.length; i++) {
+        manna[i].sprite.update(dt);
+    }
 }
 
 // Collisions
@@ -358,6 +380,17 @@ function checkCollisions() {
             gameOver();
         }
     }
+
+    for(var i=0; i<manna.length; i++) {
+        var pos = manna[i].pos;
+        var size = manna[i].sprite.size;
+
+        if(boxCollides(pos, size, player.pos, player.sprite.size)) {
+            countManna++;
+            manna.splice(i, 1);
+            i--;
+        }
+    }
 }
 
 function checkPlayerBounds() {
@@ -392,6 +425,7 @@ function render() {
     renderEntities(enemies);
     renderEntities(explosions);
     renderEntities(megaliths);
+    renderEntities(manna);
 };
 
 function renderEntities(list) {
@@ -421,9 +455,12 @@ function reset() {
     isGameOver = false;
     gameTime = 0;
     score = 0;
+    countManna = 0;
+    countTime = 0;
 
     enemies = [];
     bullets = [];
+    manna = [];
 
     player.pos = [50, canvas.height / 2];
 };

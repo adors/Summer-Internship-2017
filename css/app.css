@@ -29,8 +29,17 @@ canvas {
 
 #score {
     float: right;
-    color: white;
+    color: green;
     font-size: 2em;
+    width: 100px;
+    
+}
+
+#manna {
+    float: right;
+    color: blue;
+    font-size: 2em;
+    width: 100px;
 }
 
 .key {
