@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alexey Shmelev</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="about" style="padding:40px 0px 0px 0px;">
+		<div id="whoamI">
+        <div class="photo"></div>
+        <div class="text">
+        <p>I'm Alexey Shmelev, a student at the Ryazan State Radio Engineering University. In the specialty of software engineering. I want to become a back-end Developer.
+<br /><br />
+My job is to write the content of the program, the logic of its actions. Depending on the specifics of the project I use languages such as C# and Java, perhaps adding Javascript to this, and occasionally other programming languages (for example, C ++).</p>
+        </div>
+        </div>
+
+<div id="skills">
+		<div class="grapchic">
+        		<div class="line1"><p>Java</p></div><span class="num">25%</span>
+                <div class="line2"><p>C#</p></div><span class="num">30%</span>
+                <div class="line3"><p>C++</p></div><span class="num">40%</span>
+                <div class="line4"><p>JavaScript</p></div><span class="num">10%</span>
+                <div class="line5"><p>HTML</p></div><span class="num">2%</span>
+        </div>
+</div>        
+</div>
+<div class="clr"></div>
+<div id="toPage">
+		<div class="btntop"><a href="" class="scrollPage">Top</a></div>
+</div>
+
+</body>
+</html>

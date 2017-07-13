@@ -1,0 +1,159 @@
+
+html, body, div, span,
+h1, p, a, img, strong, b, u, i, center {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body { 
+	background-color:#fff; 
+	font-family:Georgia, "Times New Roman", Times, serif; 
+	font-style: italic; 
+	background-color: white;
+}
+
+img{ 
+	border:none;
+}
+.clr{ 
+	clear:both;
+}	
+
+#about{
+	width:990px; 
+	margin:0px auto;
+}
+
+#whoamI{ 
+	width:572px; 
+	height:392px; 
+	float:left; 
+	background:url(../images/sprite_main.png) -8px -1000px; 
+	background-repeat:no-repeat;
+}
+
+#whoamI .photo{
+	width:168px; 
+	height:176px; 
+	float:left; 
+	margin:168px 0px 0px 0px; 
+	background:url(../images/sprite_me.png) -8px -8px; 
+	background-repeat:no-repeat; 
+	border:1px solid #000; 
+	background-color:#fff; 
+	cursor:pointer;
+}
+
+#whoamI .text{ 
+	font-size:12px; 
+	line-height:16px; 
+	color:#000;
+	width:292px; 
+	float:left; 
+	margin:168px 0px 0px 28px;
+}
+
+
+#skills{
+	width:418px; 
+	height:392px; 
+	float:left; 
+	background:url(../images/sprite_main.png) -632px -1000px; 
+	background-repeat:no-repeat; 
+	font-size:12px; 
+	color:#000; 
+	font-weight:bold;
+}
+
+#skills .grapchic{ 
+	margin:168px 0px;
+}
+
+#skills .grapchic p{ 
+	padding:16px 0px 0px 20px;
+}
+
+#skills .line1{ 
+	width:350px; 
+	height:39px; 
+	float:left; 
+	background:url(../images/sprite_main.png) -1174px -8px; 
+	background-repeat:no-repeat; 
+	overflow:hidden; 
+	display:block;
+}
+
+#skills .line2{
+	width:350px; 
+	height:39px; 
+	float:left;
+}
+
+#skills .line3{
+	width:350px; 
+	height:39px; 
+	float:left;
+}
+
+#skills .line4{
+	width:350px; 
+	height:39px; 
+	float:left;
+}
+
+#skills .line5{
+	width:350px; 
+	height:39px; 
+	float:left;
+}
+
+#skills .num { 
+	float:right; 
+	font-size:14px; 
+	color:#000; 
+	display:block; 
+	height:23px; 
+	padding:14px 30px 0px 0px; 
+	font-weight:bold;
+} 
+
+#toPage{
+	width:990px; 
+	margin:0px auto; 
+	height:50px; 
+	background:url(../images/sprite_main.png) -0px -1381px; 
+	background-repeat:no-repeat; 
+	overflow:hidden; 
+	display:block;
+}
+
+#toPage .btntop a{ 
+	width:50px; 
+	height:50px; 
+	display:block; 
+	float:right; 
+	padding:0px 4px 0px 0px; 
+	text-indent:-9999px; 
+	outline:none; 
+	background:url(../images/sprite_main.png) -293px -8px;
+	background-repeat:no-repeat; 
+	overflow:hidden; 
+}
+
+#toPage .btntop a:hover{
+	background:url(../images/sprite_main.png) -354px -8px; 
+	background-repeat:no-repeat; 
+	overflow:hidden; 
+	display:block; 
+}
+
+
+
+
+
+
