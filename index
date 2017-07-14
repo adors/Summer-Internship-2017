@@ -6,8 +6,10 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div id="about" style="padding:40px 0px 0px 0px;">
-		<div id="whoamI">
+<div class="about" style="padding:40px 0px 0px 0px;">
+		<div class="whoamI">
+		<h1>who am i?</h1>
+		<h2>A FEW WORDS ABOUT ME.</h2>
         <div class="photo"></div>
         <div class="text">
         <p>I'm Alexey Shmelev, a student at the Ryazan State Radio Engineering University. In the specialty of software engineering. I want to become a back-end Developer.
@@ -16,7 +18,9 @@ My job is to write the content of the program, the logic of its actions. Dependi
         </div>
         </div>
 
-<div id="skills">
+<div class="skills">
+		<h1>My skills</h1>
+		<h2>WHAT I AM BEST AT.</h2>
 		<div class="grapchic">
         		<div class="line1"><p>Java</p></div><span class="num">25%</span>
                 <div class="line2"><p>C#</p></div><span class="num">30%</span>
@@ -29,6 +33,27 @@ My job is to write the content of the program, the logic of its actions. Dependi
 <div class="clr"></div>
 <div id="toPage">
 		<div class="btntop"><a href="" class="scrollPage">Top</a></div>
+</div>
+
+<div class="about" style="padding:40px 0px 0px 0px;">
+		<div class="whoamI">
+		<h1>Dignity</h1>
+		<h2>My strong points</h2>
+        <div class="text">
+        <div class="progress-bar blue stripes">
+    <span style="width: 70%">Сreativity</span>
+</div>
+<div class="progress-bar orange stripes">
+    <span style="width: 80%">Punctuality</span>
+</div>
+<div class="progress-bar green stripes">
+    <span style="width: 90%">Reliability</span>
+</div>
+
+        </div>
+        </div>
+
+     
 </div>
 
 </body>
